@@ -1,0 +1,6 @@
+<Alloy>
+    <TableView id="menuTable" backgroundColor="red">
+        <TableViewRow>Item 1</TableViewRow>
+        <TableViewRow>Item 2</TableViewRow>
+    </TableView>
+</Alloy>
