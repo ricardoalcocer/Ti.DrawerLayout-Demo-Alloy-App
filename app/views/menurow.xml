@@ -1,0 +1,5 @@
+<Alloy>
+	<TableViewRow height="50">
+		<Label width="Ti.UI.FILL" left="10">Menu Item</Label>
+	</TableViewRow>
+</Alloy>

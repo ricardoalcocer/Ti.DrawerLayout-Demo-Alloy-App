@@ -10,10 +10,14 @@ if (OS_ANDROID) {
     var drawer = TiDrawerLayout.createDrawer({
             leftView: menuTable,
             centerView: contentView,
-            leftDrawerWidth: "240dp",
+            leftDrawerWidth: "240",
             width: Ti.UI.FILL,
             height: Ti.UI.FILL
     });
+
+    // we'll keep global pointers
+    Alloy.CFG.drawer=drawer;
+    Alloy.CFG.contentView=contentView;
 
     drawer.addEventListener('draweropen', function(e) {
             // drawer is open
@@ -28,8 +32,18 @@ if (OS_ANDROID) {
             // slide offset: e.offset
     });
 
-    contentView.addEventListener('click',function(e){
-    	drawer.toggleLeftWindow();
+    $.mainWindow.addEventListener('open',function(){
+        var activity=$.mainWindow.getActivity();
+        if (activity){
+            var actionBar=activity.getActionBar();
+            if (actionBar){
+                actionBar.displayHomeAsUp=true;
+                actionBar.title="Ti.DrawerLayout Demo"
+                actionBar.onHomeIconItemSelected=function(){
+                  drawer.toggleLeftWindow();  
+                }
+            }    
+        }
     })
 
     $.mainWindow.add(drawer);

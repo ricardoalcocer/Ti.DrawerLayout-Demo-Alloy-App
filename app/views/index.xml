@@ -1,5 +1,5 @@
 <Alloy>
-    <Window id="mainWindow" platform="android" navBarHidden="false" backgroundColor="white">
+    <Window id="mainWindow" platform="android" navBarHidden="false" backgroundColor="white" exitOnClose="true">
         <!-- add header bar here -->
     </Window>
 </Alloy>
