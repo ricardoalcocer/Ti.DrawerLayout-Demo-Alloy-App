@@ -39,7 +39,9 @@
 	</ios>
 	<android xmlns:android="http://schemas.android.com/apk/res/android">
 		<manifest>
-		    <application android:theme="@android:style/Theme.Holo.Light.DarkActionBar"></application>
+		     <application android:theme="@style/Theme.Drawerapp"/>
+	        <uses-sdk android:minSdkVersion="11"/>
+	        <uses-sdk android:targetSdkVersion="19"/>
 		</manifest>
 	</android>
 	<mobileweb>
